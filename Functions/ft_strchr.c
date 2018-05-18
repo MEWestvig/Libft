@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 13:48:11 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:26:08 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 12:54:19 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/18 13:10:24 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int	ft_atoi(const char *str)
+char	*ft_strchr(const char *s, int c)
 {
-	int res;
-	int i;
+	char ch;
+	char *ptr;
 
-	i = 0;
-	res = 0;
-	while (str[i])
+	ch = (int)(c + '0');
+	ptr = (char*)s;
+	while (*ptr++)
 	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
+		if (*ptr == c)
+			return (ptr);
 	}
-	return (res);
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
 }

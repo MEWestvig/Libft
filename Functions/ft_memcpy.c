@@ -6,17 +6,17 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:07:06 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/17 14:14:10 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/18 09:28:53 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	*memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *str2;
-	const char *str1;
+	char		*str2;
+	const char	*str1;
 
 	str2 = dst;
 	str1 = src;

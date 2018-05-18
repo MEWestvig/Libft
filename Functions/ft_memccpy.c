@@ -1,28 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 13:48:11 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:26:08 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 09:29:27 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/18 11:20:17 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memccpy(void *dst, const void src, int c, size_t n)
 {
-	int res;
-	int i;
-
-	i = 0;
-	res = 0;
-	while (str[i])
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	return (res);
 }

@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 13:48:11 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:26:08 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 12:13:23 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/18 12:52:54 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int	ft_atoi(const char *str)
+size_t	strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int res;
-	int i;
-
-	i = 0;
-	res = 0;
-	while (str[i])
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	return (res);
 }

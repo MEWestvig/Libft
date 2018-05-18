@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 13:48:11 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:26:08 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 11:39:24 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/18 11:45:00 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int res;
-	int i;
+	char *s2;
 
-	i = 0;
-	res = 0;
-	while (str[i])
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	return (res);
+	s2 = dst;
+	while (*src)
+		*dst++ = *src++;
+	*dst = '\0';
+	return (s2);
 }

@@ -6,18 +6,14 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 13:48:48 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/17 13:50:45 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/18 09:25:48 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <strings.h>
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		return ;
-	while (n > 0)
-		s[n--] = 0;
-	return ;
+	ft_memset(s, '\0', n);
 }

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 13:48:11 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:26:08 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 12:11:29 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/18 12:12:52 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int res;
-	int i;
+	char *s1i;
 
-	i = 0;
-	res = 0;
-	while (str[i])
+	s1i = s1;
+	while (*s1i++)
+		;
+	while (n > 0)
 	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
+		*s1i++ = *s2++;
+		n--;
 	}
-	return (res);
+	*s1i = '\0';
+	return (s1);
 }

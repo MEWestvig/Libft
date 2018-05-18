@@ -6,13 +6,13 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:08:38 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/17 14:08:42 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/18 09:27:11 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;
 
