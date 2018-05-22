@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 14:57:49 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/22 15:07:53 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/22 15:22:14 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/22 15:50:22 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
-
-int	ft_strcmp(const char *s1, const char *s2)
+char	*ft_strnew(size_t size)
 {
-	while (*s1 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return ((unsigned char *)s2 - (unsigned char *)s1);
+	char *str;
+
+	if (!(str = (char *)malloc(size + 1)))
+		return (NULL);
+	while (size-- > -1)
+		*str++ = '\0';
+	*str = '\0';
+	return (str);
 }
