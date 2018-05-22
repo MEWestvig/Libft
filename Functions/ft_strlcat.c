@@ -15,4 +15,18 @@
 
 size_t	strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	dlen;
+	size_t	slen;
+
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	if (dstsize < dlen + 1)
+		return (NULL);
+	while (*dst++)
+		;
+	while (*src && src < dstsize)
+		*dst++ = *src++;
+	if (src < dstsize)
+		*dst = '\0';
+	return (slen + dlen);
 }
