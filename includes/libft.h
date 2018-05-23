@@ -6,9 +6,17 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:20:51 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/17 14:23:06 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:14:42 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef	LIBFT_H
+# define LIBFT_H
+# include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+
+# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\n' || x == '\r' || x == '\f')
 
 /*Mandatory part 1*/
 void	*ft_memset(void *b, int c, size_t len);
