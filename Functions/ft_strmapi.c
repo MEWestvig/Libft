@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 09:03:16 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/23 09:40:29 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/23 09:43:28 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/23 09:47:06 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void ft_striter(char *s, void (*f)(char *))
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (*s)
-		f(*s++);
+	char *str;
+	int i;
+
+	i = -1;
+	str = (char *)malloc(size_of(char) * ft_strlen(s));
+	if (s && f)
+		while (*(s + ++i))
+			*str++ = f(i, *(s + i));
+	return (str);
 }
