@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 09:08:42 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/23 09:47:12 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/18 11:45:54 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/23 18:32:30 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char *ft_strmap(char const *s, char (*f)(char))
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	char *str;
+	char	*s2;
+	size_t	i;
 
-	str = (char *)malloc(size_of(char) * ft_strlen(s));
-	while (*s)
-		*str++ = f(*s++);
-	return (str);
+	if (dst == NULL || src == NULL)
+		return (NULL);
+	s2 = dst;
+	i = 0;
+	while (i < len)
+	{
+		while (*src)
+		{
+			*dst++ = *src++;
+			i++;
+		}
+		*dst++ = '\0';
+		i++;
+	}
+	return (s2);
 }

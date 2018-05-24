@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 11:45:54 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 12:03:14 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/17 14:10:08 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/23 18:31:17 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+size_t	ft_strlen(const char *s)
 {
-	char	*s2;
-	int		i;
+	int len;
 
-	if (dst == NULL || src == NULL)
-		return (NULL);
-	s2 = dst;
-	i = 0;
-	while (i < len)
-	{
-		while (*src)
-		{
-			*dst++ = *src++;
-			i++;
-		}
-		*dst++ = '\0';
-		i++;
-	}
-	return (s2);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }

@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:11:29 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 12:12:52 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/23 16:21:16 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/23 16:21:32 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
-{
-	char *s1i;
+#include "libft.h"
 
-	s1i = s1;
-	while (*s1i++)
-		;
-	while (n > 0)
-	{
-		*s1i++ = *s2++;
-		n--;
-	}
-	*s1i = '\0';
-	return (s1);
+void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
 }

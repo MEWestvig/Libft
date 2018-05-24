@@ -1,17 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 09:29:27 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 11:20:17 by mwestvig         ###   ########.fr       */
+/*   Created: 2018/05/23 09:01:42 by mwestvig          #+#    #+#             */
+/*   Updated: 2018/05/23 20:10:16 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void src, int c, size_t n)
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
+	int i;
+
+	i = -1;
+	if (s && f)
+		while (*(s + ++i))
+			f(i, (s + i));
 }
