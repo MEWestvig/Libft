@@ -6,12 +6,14 @@
 /*   By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:21:49 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/23 16:22:05 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/24 13:34:18 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
+	new->next = *alst;
+	*alst = new;
 }

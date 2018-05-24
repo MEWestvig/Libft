@@ -6,13 +6,13 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 09:08:42 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/23 20:12:41 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/24 09:18:57 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char *str;
 

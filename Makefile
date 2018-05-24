@@ -6,7 +6,7 @@
 #    By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/23 16:06:00 by mwestvig          #+#    #+#              #
-#    Updated: 2018/05/23 20:45:18 by mwestvig         ###   ########.fr        #
+#    Updated: 2018/05/24 13:59:09 by mwestvig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,12 @@ SRCS = ft_memset.c \
 	   ft_putstr_fd.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c \
+	   ft_lstnew.c \
+	   ft_lstdelone.c \
+	   ft_lstdel.c \
+	   ft_lstadd.c \
+	   ft_lstiter.c \
+	   ft_lstmap.c \
 	   ft_countwords.c \
 
 OBJ = $(SRCS:.c=.o)

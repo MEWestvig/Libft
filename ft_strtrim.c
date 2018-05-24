@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 10:54:04 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/23 20:21:13 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/24 09:35:44 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strtrim(char const *s)
 	char	*ret;
 	int		len;
 	int		i;
+
 	if (!s)
 		return (NULL);
 	while (*s && IS_SPACE(*s))
@@ -24,7 +25,7 @@ char	*ft_strtrim(char const *s)
 	len = ft_strlen(s) == 0 ? 0 : ft_strlen(s) - 1;
 	if (len > 0)
 	{
-  		while (IS_SPACE(s[len]))
+		while (IS_SPACE(s[len]))
 			len--;
 		len++;
 	}
