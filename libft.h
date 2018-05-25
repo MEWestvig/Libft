@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:20:51 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 13:54:40 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:06:09 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <string.h>
 # include <stdlib.h>
 
-# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\n')
+# ifndef IS_SPACE
+#  define IS_SPACE(x) (x <= 32)
+# endif
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);

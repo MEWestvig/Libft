@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:45:54 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 16:07:36 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/25 11:50:24 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	s2 = dst;
 	i = -1;
 	while (++i < len)
-	{
-		while (*src)
-			*dst++ = *src++;
-		*dst++ = '\0';
-	}
-	return (s2);
+		if (*src)
+			*s2++ = *src++;
+		else
+			while (i < len)
+				*s2++ = '\0';
+	return (dst);
 }

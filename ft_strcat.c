@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:57:31 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 12:10:16 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:26:23 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	char *s1i;
+	int		i;
+	int		j;
 
-	s1i = s1;
-	while (*s1i++)
-		;
-	while (*s2)
-		*s1i++ = *s2++;
-	*s1i = '\0';
+	i = -1;
+	j = (int)ft_strlen(s1);
+	while (*(s2 + ++i))
+		*(s1 + j++) = *(s2 + i);
+	*(s1 + j) = '\0';
 	return (s1);
 }
