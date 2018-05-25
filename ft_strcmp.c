@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:57:49 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/22 15:07:53 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/24 15:27:35 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	return ((unsigned char *)s2 - (unsigned char *)s1);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

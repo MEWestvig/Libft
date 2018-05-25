@@ -6,7 +6,7 @@
 /*   By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:31:57 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 09:10:12 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/24 16:01:59 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static int	count_chars(int num)
 
 char		*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
-	int		ncpy;
+	int				len;
+	char			*str;
+	unsigned int	ncpy;
 
 	len = count_chars(n);
 	str = (char *)malloc(sizeof(char) * len);
