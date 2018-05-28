@@ -6,12 +6,11 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:51:01 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/28 08:46:38 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 12:45:20 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_strdel(char **as)
 {
