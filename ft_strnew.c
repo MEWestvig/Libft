@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:22:14 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/28 08:43:55 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 10:04:37 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnew(size_t size)
 	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	while (n-- > -1)
-		*(str + i++) = '\0';;
+		*(str + i++) = '\0';
 	*(str + i) = '\0';
 	return (str);
 }
