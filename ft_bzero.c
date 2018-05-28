@@ -6,12 +6,11 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 13:48:48 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:25:48 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 09:50:48 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {

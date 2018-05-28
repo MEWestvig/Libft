@@ -6,12 +6,11 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:07:06 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/18 09:28:53 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 09:51:15 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
