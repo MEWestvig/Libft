@@ -6,7 +6,7 @@
 /*   By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:31:57 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 16:01:59 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/27 21:40:23 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ static int	count_chars(int num)
 		i++;
 		num = -num;
 	}
-	while (num > 0)
-	{
+	while (num /= 10)
 		i++;
-		num /= 10;
-	}
 	return (i);
 }
 
@@ -37,11 +34,13 @@ char		*ft_itoa(int n)
 	unsigned int	ncpy;
 
 	len = count_chars(n);
-	str = (char *)malloc(sizeof(char) * len);
+	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
 	if (n < 0)
 		ncpy = -n;
 	else
 		ncpy = n;
+	str[len] = '\0';
 	str[--len] = ncpy % 10 + '0';
 	while (ncpy /= 10)
 		str[--len] = ncpy % 10 + '0';

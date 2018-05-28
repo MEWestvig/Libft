@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 09:47:44 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 15:44:22 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 08:48:15 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
 		return (0);
-	while (*s1 && *s2)
+	while (*s1 || *s2)
 		if (*s1++ != *s2++)
 			return (0);
 	return (1);

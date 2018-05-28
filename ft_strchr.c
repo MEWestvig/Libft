@@ -6,7 +6,7 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:54:19 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/25 10:22:48 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/27 21:50:28 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int		i;
 
 	i = -1;
 	while (++i < (int)ft_strlen(s) + 1)

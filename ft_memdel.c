@@ -6,15 +6,16 @@
 /*   By: mwestvig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:12:41 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/22 15:56:56 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/28 08:40:10 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {
+	if (!ap || !*ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

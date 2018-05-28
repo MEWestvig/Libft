@@ -6,7 +6,7 @@
 /*   By: mwestvig <m.westvig@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:22:46 by mwestvig          #+#    #+#             */
-/*   Updated: 2018/05/24 13:51:33 by mwestvig         ###   ########.fr       */
+/*   Updated: 2018/05/27 21:46:29 by mwestvig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		return (NULL);
 	list = f(lst);
 	new = list;
-	while (list->next)
+	while (lst->next)
 	{
 		lst = lst->next;
-		if (!(lst->next = f(lst)))
+		if (!(list->next = f(lst)))
 		{
 			free(list->next);
 			return (NULL);
